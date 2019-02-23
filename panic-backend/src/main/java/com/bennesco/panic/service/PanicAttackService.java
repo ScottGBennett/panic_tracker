@@ -15,7 +15,6 @@ public class PanicAttackService {
 	
 	public void savePanicAttack(PanicEntryRequest entry) {
 		PanicAttackEntry panicAttack = new PanicAttackEntry();
-		panicAttack.setDate(entry.getDate());
 		panicAttack.setUserName(entry.getUserName());
 		panicRepository.saveAndFlush(panicAttack);
 	}

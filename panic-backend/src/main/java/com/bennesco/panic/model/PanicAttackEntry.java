@@ -15,7 +15,6 @@ public class PanicAttackEntry {
 	
 	private String userName;
 	
-	private Date date;
 
 	public long getId() {
 		return id;
@@ -33,12 +32,5 @@ public class PanicAttackEntry {
 		this.userName = userName;
 	}
 
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
 	
 }
