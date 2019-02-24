@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +18,7 @@ import com.bennesco.panic.repository.PanicAttackEntryRepository;
 import com.bennesco.panic.service.PanicAttackService;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class PanicAttackController {
 	
 	@Autowired
@@ -34,6 +36,7 @@ public class PanicAttackController {
 	public List<PanicAttackEntry> getAllByUserName (@PathVariable String userName) {
 		return panicRepository.findByUserName(userName);
 	}
+	
 	
 	@PostMapping(value="/submit", consumes = {MediaType.APPLICATION_JSON_VALUE})
 	public HttpStatus submitNewPanicAttack(@RequestBody PanicEntryRequest entry) {

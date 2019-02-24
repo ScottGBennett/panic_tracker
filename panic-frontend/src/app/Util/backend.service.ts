@@ -20,9 +20,9 @@ export class BackendService {
   constructor(private http: HttpClient) {}
   postAttack(attack: Attack) {
     const url = 'http://localhost:8080/submit';
-    return this.http.post(url, JSON.stringify(attack), httpOptions)
+    return this.http.post(url, attack, httpOptions)
     .pipe(
-      catchError(this.handleError('postLimb', []))
+      catchError(this.handleError('postAttack', []))
     );
   }
 

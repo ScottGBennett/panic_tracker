@@ -20,6 +20,8 @@ export class TestComponentAgainComponent implements OnInit {
 
     userName = (<HTMLInputElement>document.getElementById('userName')).value;
     attack.userName = userName;
-    this.backendService.postAttack(attack);
+    this.backendService.postAttack(attack).subscribe(response => alert(response),
+      err => alert(err)
+    );
   }
 }
