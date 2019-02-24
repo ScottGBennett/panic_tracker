@@ -17,9 +17,14 @@ export class TestComponentAgainComponent implements OnInit {
   submit() {
     const attack: Attack = new Attack();
     let userName: string;
+    let thoughts: string[];
+    let date: Date;
 
-    userName = (<HTMLInputElement>document.getElementById('userName')).value;
+    userName = (document.getElementById('userName') as HTMLInputElement).value;
+    thoughts = (document.getElementById('thoughts') as HTMLInputElement).value.split(',');
+    date = Date.parse((document.getElementById('date') as HTMLInputElement).value);
     attack.userName = userName;
+    attack.thoughts = thoughts;
     this.backendService.postAttack(attack).subscribe(response => alert(response),
       err => alert(err)
     );
