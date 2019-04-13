@@ -13,9 +13,7 @@ public class PanicAttackService {
 	@Autowired
 	PanicAttackEntryRepository panicRepository;
 	
-	public void savePanicAttack(PanicEntryRequest entry) {
-		PanicAttackEntry panicAttack = new PanicAttackEntry();
-		panicAttack.setUserName(entry.getUserName());
-		panicRepository.saveAndFlush(panicAttack);
+	public void savePanicAttack(PanicEntryRequest request) {
+		panicRepository.saveAndFlush(new PanicAttackEntry(request));
 	}
 }
