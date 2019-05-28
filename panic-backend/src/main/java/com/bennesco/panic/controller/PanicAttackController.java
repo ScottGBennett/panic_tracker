@@ -10,14 +10,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bennesco.panic.dto.PanicEntryRequest;
 import com.bennesco.panic.model.PanicAttackEntry;
 import com.bennesco.panic.repository.PanicAttackEntryRepository;
-import com.bennesco.panic.service.PanicAttackService;
+import com.bennesco.panic.service.PanicAttackEntryService;
 
 @RestController
+@RequestMapping("/entry")
 @CrossOrigin(origins = "http://localhost:4200")
 public class PanicAttackController {
 	
@@ -25,7 +27,7 @@ public class PanicAttackController {
 	PanicAttackEntryRepository panicRepository;
 	
 	@Autowired
-	PanicAttackService panicService;
+	PanicAttackEntryService panicService;
 
 	@GetMapping(value="/all", produces = {MediaType.APPLICATION_JSON_VALUE})
 	public List<PanicAttackEntry> getAll(){
