@@ -5,9 +5,11 @@ import java.util.Map;
 
 import org.springframework.stereotype.Service;
 
+import com.bennesco.panic.constants.Constants;
+
 @Service
 public class StatisticsService {
-	
+
 	public Map<String, Integer> generatePhrasesMap(Map<String, Integer> phrasesMap, List<String> listOfPhrases) {
 		for (String phrase : listOfPhrases) {
 			String trimmedPhrase = trimString(phrase);
@@ -22,7 +24,9 @@ public class StatisticsService {
 			String trimmedPhrase = trimString(phrase);
 			String[] wordsInPhrase = trimmedPhrase.split(" ");
 			for (String word : wordsInPhrase) {
-				addToMap(wordsMap, word);
+				if (shouldIncludeWord(word) ) {
+					addToMap(wordsMap, word);
+				}
 			}
 		}
 		return wordsMap;
@@ -38,5 +42,13 @@ public class StatisticsService {
 	
 	private String trimString(String string) {
 		return string.replaceAll("[^a-zA-Z0-9'\\s]", "");
+	}
+	
+	private boolean shouldIncludeWord(String word) {
+		boolean shouldInclude = false;
+		if (!Constants.getExcludedWordsList().contains(word.toLowerCase())) {
+			shouldInclude = true;
+		}
+		return shouldInclude;
 	}
 }
