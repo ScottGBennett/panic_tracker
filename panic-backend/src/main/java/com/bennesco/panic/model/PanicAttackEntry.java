@@ -23,11 +23,11 @@ public class PanicAttackEntry {
 	@ElementCollection
 	private List<String> thoughtsAfter;
 	@ElementCollection
-	private List<String> behaviorBefore;
+	private List<String> behaviorsBefore;
 	@ElementCollection
-	private List<String> behaviorDuring;
+	private List<String> behaviorsDuring;
 	@ElementCollection
-	private List<String> behaviorAfter;
+	private List<String> behaviorsAfter;
 	private String userName;
 	private Date date;
 		
@@ -41,9 +41,9 @@ public class PanicAttackEntry {
 		this.setThoughtsBefore(request.getThoughtsBefore());
 		this.setThoughtsAfter(request.getThoughtsAfter());
 		this.setThoughtsDuring(request.getThoughtsDuring());
-		this.setBehaviorBefore(request.getBehaviorBefore());
-		this.setBehaviorAfter(request.getBehaviorAfter());
-		this.setBehaviorDuring(request.getBehaviorDuring());
+		this.setBehaviorsBefore(request.getBehaviorsBefore());
+		this.setBehaviorsAfter(request.getBehaviorsAfter());
+		this.setBehaviorsDuring(request.getBehaviorsDuring());
 	}
 	
 	public long getId() {
@@ -85,28 +85,28 @@ public class PanicAttackEntry {
 	public void setThoughtsAfter(List<String> thoughtsAfter) {
 		this.thoughtsAfter = thoughtsAfter;
 	}
-	public List<String> getBehaviorBefore() {
-		return behaviorBefore;
+	public List<String> getBehaviorsBefore() {
+		return behaviorsBefore;
 	}
 
-	public void setBehaviorBefore(List<String> behaviorBefore) {
-		this.behaviorBefore = behaviorBefore;
+	public void setBehaviorsBefore(List<String> behaviorsBefore) {
+		this.behaviorsBefore = behaviorsBefore;
 	}
 
-	public List<String> getBehaviorDuring() {
-		return behaviorDuring;
+	public List<String> getBehaviorsDuring() {
+		return behaviorsDuring;
 	}
 
-	public void setBehaviorDuring(List<String> behaviorDuring) {
-		this.behaviorDuring = behaviorDuring;
+	public void setBehaviorsDuring(List<String> behaviorsDuring) {
+		this.behaviorsDuring = behaviorsDuring;
 	}
 
-	public List<String> getBehaviorAfter() {
-		return behaviorAfter;
+	public List<String> getBehaviorsAfter() {
+		return behaviorsAfter;
 	}
 
-	public void setBehaviorAfter(List<String> behaviorAfter) {
-		this.behaviorAfter = behaviorAfter;
+	public void setBehaviorsAfter(List<String> behaviorsAfter) {
+		this.behaviorsAfter = behaviorsAfter;
 	}
 
 	public Date getDate() {

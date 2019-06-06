@@ -11,9 +11,9 @@ public class PanicEntryRequest {
 	private List<String> thoughtsBefore;
 	private List<String> thoughtsDuring;
 	private List<String> thoughtsAfter;
-	private List<String> behaviorBefore;
-	private List<String> behaviorDuring;
-	private List<String> behaviorAfter;
+	private List<String> behaviorsBefore;
+	private List<String> behaviorsDuring;
+	private List<String> behaviorsAfter;
 	
 	public long getId() {
 		return id;
@@ -51,22 +51,23 @@ public class PanicEntryRequest {
 	public void setThoughtsAfter(List<String> thoughtsAfter) {
 		this.thoughtsAfter = thoughtsAfter;
 	}
-	public List<String> getBehaviorBefore() {
-		return behaviorBefore;
+	public List<String> getBehaviorsBefore() {
+		return behaviorsBefore;
 	}
-	public void setBehaviorBefore(List<String> behaviorBefore) {
-		this.behaviorBefore = behaviorBefore;
+	public void setBehaviorsBefore(List<String> behaviorsBefore) {
+		this.behaviorsBefore = behaviorsBefore;
 	}
-	public List<String> getBehaviorDuring() {
-		return behaviorDuring;
+	public List<String> getBehaviorsDuring() {
+		return behaviorsDuring;
 	}
-	public void setBehaviorDuring(List<String> behaviorDuring) {
-		this.behaviorDuring = behaviorDuring;
+	public void setBehaviorsDuring(List<String> behaviorsDuring) {
+		this.behaviorsDuring = behaviorsDuring;
 	}
-	public List<String> getBehaviorAfter() {
-		return behaviorAfter;
+	public List<String> getBehaviorsAfter() {
+		return behaviorsAfter;
 	}
-	public void setBehaviorAfter(List<String> behaviorAfter) {
-		this.behaviorAfter = behaviorAfter;
+	public void setBehaviorsAfter(List<String> behaviorsAfter) {
+		this.behaviorsAfter = behaviorsAfter;
 	}
+
 }

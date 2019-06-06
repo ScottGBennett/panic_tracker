@@ -35,19 +35,19 @@ public class PanicAttackEntryService {
 	}
 
 	private void updateStatistics(EntryStatistics statistics, PanicEntryRequest request) {
-		statistics.setBehaviorPhrasesAfterMap(statisticsService
-				.generatePhrasesMap(statistics.getBehaviorPhrasesAfterMap(), request.getBehaviorAfter()));
-		statistics.setBehaviorPhrasesBeforeMap(statisticsService
-				.generatePhrasesMap(statistics.getBehaviorPhrasesBeforeMap(), request.getBehaviorBefore()));
-		statistics.setBehaviorPhrasesDuringMap(statisticsService
-				.generatePhrasesMap(statistics.getBehaviorPhrasesDuringMap(), request.getBehaviorDuring()));
+		statistics.setBehaviorsPhrasesAfterMap(statisticsService
+				.generatePhrasesMap(statistics.getBehaviorsPhrasesAfterMap(), request.getBehaviorsAfter()));
+		statistics.setBehaviorsPhrasesBeforeMap(statisticsService
+				.generatePhrasesMap(statistics.getBehaviorsPhrasesBeforeMap(), request.getBehaviorsBefore()));
+		statistics.setBehaviorsPhrasesDuringMap(statisticsService
+				.generatePhrasesMap(statistics.getBehaviorsPhrasesDuringMap(), request.getBehaviorsDuring()));
 
-		statistics.setBehaviorWordsAfterMap(
-				statisticsService.generateWordsMap(statistics.getBehaviorWordsAfterMap(), request.getBehaviorAfter()));
-		statistics.setBehaviorWordsBeforeMap(statisticsService.generateWordsMap(statistics.getBehaviorWordsBeforeMap(),
-				request.getBehaviorBefore()));
-		statistics.setBehaviorWordsDuringMap(statisticsService.generateWordsMap(statistics.getBehaviorWordsDuringMap(),
-				request.getBehaviorDuring()));
+		statistics.setBehaviorsWordsAfterMap(
+				statisticsService.generateWordsMap(statistics.getBehaviorsWordsAfterMap(), request.getBehaviorsAfter()));
+		statistics.setBehaviorsWordsBeforeMap(statisticsService.generateWordsMap(statistics.getBehaviorsWordsBeforeMap(),
+				request.getBehaviorsBefore()));
+		statistics.setBehaviorsWordsDuringMap(statisticsService.generateWordsMap(statistics.getBehaviorsWordsDuringMap(),
+				request.getBehaviorsDuring()));
 
 		statistics.setThoughtPhrasesAfterMap(statisticsService
 				.generatePhrasesMap(statistics.getThoughtPhrasesAfterMap(), request.getThoughtsAfter()));

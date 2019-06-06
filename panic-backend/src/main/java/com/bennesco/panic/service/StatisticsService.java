@@ -13,8 +13,9 @@ public class StatisticsService {
 	public Map<String, Integer> generatePhrasesMap(Map<String, Integer> phrasesMap, List<String> listOfPhrases) {
 		for (String phrase : listOfPhrases) {
 			String trimmedPhrase = trimString(phrase);
-			addToMap(phrasesMap, trimmedPhrase);
-			
+			if (isPhrase(phrase)) {
+				addToMap(phrasesMap, trimmedPhrase);
+			}
 		}
 		return phrasesMap;
 	}
@@ -41,14 +42,14 @@ public class StatisticsService {
 	}
 	
 	private String trimString(String string) {
-		return string.replaceAll("[^a-zA-Z0-9'\\s]", "");
+		return string.replaceAll("[^a-zA-Z0-9'-\\s]", "");
 	}
 	
 	private boolean shouldIncludeWord(String word) {
-		boolean shouldInclude = false;
-		if (!Constants.getExcludedWordsList().contains(word.toLowerCase())) {
-			shouldInclude = true;
-		}
-		return shouldInclude;
+		return !Constants.getExcludedWordsList().contains(word.toLowerCase());
+	}
+	
+	private boolean isPhrase(String phrase) {
+		return phrase.split(" ").length > 1;
 	}
 }

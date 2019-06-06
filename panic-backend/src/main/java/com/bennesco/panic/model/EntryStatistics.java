@@ -5,7 +5,6 @@ import java.util.Map;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
@@ -22,11 +21,11 @@ public class EntryStatistics {
 	private Map<String, Integer> thoughtPhrasesAfterMap;
 	
 	@ElementCollection
-	private Map<String, Integer> behaviorPhrasesBeforeMap;
+	private Map<String, Integer> behaviorsPhrasesBeforeMap;
 	@ElementCollection
-	private Map<String, Integer> behaviorPhrasesDuringMap;
+	private Map<String, Integer> behaviorsPhrasesDuringMap;
 	@ElementCollection
-	private Map<String, Integer> behaviorPhrasesAfterMap;
+	private Map<String, Integer> behaviorsPhrasesAfterMap;
 	
 	@ElementCollection
 	private Map<String, Integer> thoughtWordsBeforeMap;
@@ -36,11 +35,11 @@ public class EntryStatistics {
 	private Map<String, Integer> thoughtWordsAfterMap;
 	
 	@ElementCollection
-	private Map<String, Integer> behaviorWordsBeforeMap;
+	private Map<String, Integer> behaviorsWordsBeforeMap;
 	@ElementCollection
-	private Map<String, Integer> behaviorWordsDuringMap;
+	private Map<String, Integer> behaviorsWordsDuringMap;
 	@ElementCollection
-	private Map<String, Integer> behaviorWordsAfterMap;
+	private Map<String, Integer> behaviorsWordsAfterMap;
 	
 	Integer totalNumberOfAttacks;
 
@@ -53,13 +52,13 @@ public class EntryStatistics {
 		thoughtWordsBeforeMap = new HashMap<>();
 		thoughtWordsDuringMap = new HashMap<>();
 		
-		behaviorPhrasesAfterMap = new HashMap<>();
-		behaviorPhrasesBeforeMap = new HashMap<>();
-		behaviorPhrasesDuringMap = new HashMap<>();
+		behaviorsPhrasesAfterMap = new HashMap<>();
+		behaviorsPhrasesBeforeMap = new HashMap<>();
+		behaviorsPhrasesDuringMap = new HashMap<>();
 		
-		behaviorWordsAfterMap = new HashMap<>();
-		behaviorWordsBeforeMap = new HashMap<>();
-		behaviorWordsDuringMap = new HashMap<>();
+		behaviorsWordsAfterMap = new HashMap<>();
+		behaviorsWordsBeforeMap = new HashMap<>();
+		behaviorsWordsDuringMap = new HashMap<>();
 		
 		totalNumberOfAttacks = 0;
 		userName = "";
@@ -98,28 +97,28 @@ public class EntryStatistics {
 		this.thoughtPhrasesAfterMap = thoughtPhrasesAfterMap;
 	}
 
-	public Map<String, Integer> getBehaviorPhrasesBeforeMap() {
-		return behaviorPhrasesBeforeMap;
+	public Map<String, Integer> getBehaviorsPhrasesBeforeMap() {
+		return behaviorsPhrasesBeforeMap;
 	}
 
-	public void setBehaviorPhrasesBeforeMap(Map<String, Integer> behaviorPhrasesBeforeMap) {
-		this.behaviorPhrasesBeforeMap = behaviorPhrasesBeforeMap;
+	public void setBehaviorsPhrasesBeforeMap(Map<String, Integer> behaviorsPhrasesBeforeMap) {
+		this.behaviorsPhrasesBeforeMap = behaviorsPhrasesBeforeMap;
 	}
 
-	public Map<String, Integer> getBehaviorPhrasesDuringMap() {
-		return behaviorPhrasesDuringMap;
+	public Map<String, Integer> getBehaviorsPhrasesDuringMap() {
+		return behaviorsPhrasesDuringMap;
 	}
 
-	public void setBehaviorPhrasesDuringMap(Map<String, Integer> behaviorPhrasesDuringMap) {
-		this.behaviorPhrasesDuringMap = behaviorPhrasesDuringMap;
+	public void setBehaviorsPhrasesDuringMap(Map<String, Integer> behaviorsPhrasesDuringMap) {
+		this.behaviorsPhrasesDuringMap = behaviorsPhrasesDuringMap;
 	}
 
-	public Map<String, Integer> getBehaviorPhrasesAfterMap() {
-		return behaviorPhrasesAfterMap;
+	public Map<String, Integer> getBehaviorsPhrasesAfterMap() {
+		return behaviorsPhrasesAfterMap;
 	}
 
-	public void setBehaviorPhrasesAfterMap(Map<String, Integer> behaviorPhrasesAfterMap) {
-		this.behaviorPhrasesAfterMap = behaviorPhrasesAfterMap;
+	public void setBehaviorsPhrasesAfterMap(Map<String, Integer> behaviorsPhrasesAfterMap) {
+		this.behaviorsPhrasesAfterMap = behaviorsPhrasesAfterMap;
 	}
 
 	public Map<String, Integer> getThoughtWordsBeforeMap() {
@@ -146,28 +145,28 @@ public class EntryStatistics {
 		this.thoughtWordsAfterMap = thoughtWordsAfterMap;
 	}
 
-	public Map<String, Integer> getBehaviorWordsBeforeMap() {
-		return behaviorWordsBeforeMap;
+	public Map<String, Integer> getBehaviorsWordsBeforeMap() {
+		return behaviorsWordsBeforeMap;
 	}
 
-	public void setBehaviorWordsBeforeMap(Map<String, Integer> behaviorWordsBeforeMap) {
-		this.behaviorWordsBeforeMap = behaviorWordsBeforeMap;
+	public void setBehaviorsWordsBeforeMap(Map<String, Integer> behaviorsWordsBeforeMap) {
+		this.behaviorsWordsBeforeMap = behaviorsWordsBeforeMap;
 	}
 
-	public Map<String, Integer> getBehaviorWordsDuringMap() {
-		return behaviorWordsDuringMap;
+	public Map<String, Integer> getBehaviorsWordsDuringMap() {
+		return behaviorsWordsDuringMap;
 	}
 
-	public void setBehaviorWordsDuringMap(Map<String, Integer> behaviorWordsDuringMap) {
-		this.behaviorWordsDuringMap = behaviorWordsDuringMap;
+	public void setBehaviorsWordsDuringMap(Map<String, Integer> behaviorsWordsDuringMap) {
+		this.behaviorsWordsDuringMap = behaviorsWordsDuringMap;
 	}
 
-	public Map<String, Integer> getBehaviorWordsAfterMap() {
-		return behaviorWordsAfterMap;
+	public Map<String, Integer> getBehaviorsWordsAfterMap() {
+		return behaviorsWordsAfterMap;
 	}
 
-	public void setBehaviorWordsAfterMap(Map<String, Integer> behaviorWordsAfterMap) {
-		this.behaviorWordsAfterMap = behaviorWordsAfterMap;
+	public void setBehaviorsWordsAfterMap(Map<String, Integer> behaviorsWordsAfterMap) {
+		this.behaviorsWordsAfterMap = behaviorsWordsAfterMap;
 	}
 
 	public Integer getTotalNumberOfAttacks() {
