@@ -28,6 +28,5 @@ public class PanicAttackEntryService {
 		concordance.setTotalNumberOfAttacks(concordance.getTotalNumberOfAttacks() + 1);
 		panicRepository.saveAndFlush(new PanicAttackEntry(request));
 		concordanceRepository.saveAndFlush(concordance);
-		
 	}
 }
