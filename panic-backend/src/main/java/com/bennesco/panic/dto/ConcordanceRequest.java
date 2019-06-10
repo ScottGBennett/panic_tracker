@@ -2,7 +2,7 @@ package com.bennesco.panic.dto;
 
 import java.util.Map;
 
-public class StatisticsRequest {
+public class ConcordanceRequest {
 	
 	private String userName;
 	

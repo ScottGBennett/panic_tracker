@@ -9,19 +9,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bennesco.panic.model.EntryStatistics;
-import com.bennesco.panic.repository.StatisticsRepository;
+import com.bennesco.panic.model.Concordance;
+import com.bennesco.panic.repository.ConcordanceRepository;
 
 @RestController
 @RequestMapping("/statistics")
-@CrossOrigin(origins = "http://localhost:4200")
-public class StatisticsController {
+public class ConcordanceController {
 
 	@Autowired
-	StatisticsRepository statRepository;
+	ConcordanceRepository statRepository;
 	
 	@GetMapping(value="/all", produces = {MediaType.APPLICATION_JSON_VALUE})
-	public List<EntryStatistics> getAllStatistics() {
+	public List<Concordance> getAllStatistics() {
 		return statRepository.findAll();
 	}
 	
