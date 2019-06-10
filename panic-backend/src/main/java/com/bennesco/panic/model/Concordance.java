@@ -131,7 +131,7 @@ public class Concordance {
 	}
 	
 	private String trimString(String string) {
-		return string.replaceAll("[^a-zA-Z0-9'-\\s]", "");
+		return string.replaceAll("[^a-zA-Z0-9\\s'\\-]", "");
 	}
 	
 	private boolean shouldIncludeWord(String word) {
