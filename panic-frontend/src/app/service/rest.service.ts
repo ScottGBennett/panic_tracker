@@ -13,6 +13,7 @@ const httpPostOptions = {
 };
 
 const postEntryUrl = 'http://localhost:8080/entry/submit';
+const getAllEntryUrl = 'http://localhost:8080/entry/'
 
 @Injectable({
   providedIn: 'root'
@@ -24,11 +25,15 @@ export class RestService {
   postEntry(entry: Entry): Observable<Entry> {
     return this.http.post<Entry>(postEntryUrl, entry, httpPostOptions)
       .pipe(
-        catchError(this.handleError('postEntry', entry))
+        catchError(this.handlePostError('postEntry', entry))
       );
   }
 
-  private handleError<T>(operation = 'operation', result?: T) {
+  getAllEntries(userName: string): Observable<Entry[]> {
+    return this.http.get<Entry[]>(getAllEntryUrl + userName, httpPostOptions).pipe();
+  }
+
+  private handlePostError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
       return of(result as T);

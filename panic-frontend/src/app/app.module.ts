@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { EntryComponent } from './entry/entry/entry.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EntryViewComponent } from './entry-view/entry-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EntryComponent
+    EntryComponent,
+    EntryViewComponent
   ],
   imports: [
     BrowserModule,
