@@ -1,3 +1,12 @@
-<p>
-  entry-view works!
-</p>
+<ul>
+    <li *ngFor="let entry of entries">
+      {{ entry.userName }}<br>
+      {{ entry.date }}<br>
+      {{ entry.thoughtsBefore }}<br>
+      {{ entry.thoughtsDuring }}<br>
+      {{ entry.thoughtsAfter }}<br>
+      {{ entry.behaviorsBefore }}<br>
+      {{ entry.behaviorsDuring }}<br>
+      {{ entry.behaviorsAfter }}<br>
+    </li>
+  </ul>

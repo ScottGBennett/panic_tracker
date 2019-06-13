@@ -13,7 +13,7 @@ const httpPostOptions = {
 };
 
 const postEntryUrl = 'http://localhost:8080/entry/submit';
-const getAllEntryUrl = 'http://localhost:8080/entry/'
+const getAllEntryUrl = 'http://localhost:8080/entry/';
 
 @Injectable({
   providedIn: 'root'

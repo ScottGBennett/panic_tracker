@@ -10,13 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EntryViewComponent implements OnInit {
 
-  entries: () => IterableIterator<[number, Entry]>;
+  entries: Array<Entry>;
 
   constructor(private restService: RestService) {
-     restService.getAllEntries('incendo').subscribe(response => {
-      console.warn(response);
-     });
-   }
+    restService.getAllEntries('nimchimpsky').subscribe(response => {
+      this.entries = response;
+    });
+  }
 
   ngOnInit() {
   }

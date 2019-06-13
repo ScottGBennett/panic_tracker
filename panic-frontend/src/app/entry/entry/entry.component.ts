@@ -1,7 +1,6 @@
 import { RestService } from './../../service/rest.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
-import { restoreView } from '@angular/core/src/render3';
 import { Entry } from './entry.model';
 
 @Component({
