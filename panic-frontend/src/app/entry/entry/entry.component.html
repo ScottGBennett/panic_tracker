@@ -3,7 +3,7 @@
   <fieldset formGroupName="before">
     <legend>Before</legend>
     <label>Thoughts</label>
-    <input type="text" formControlName="thoughtsBefore">
+    <input type="text" formControlName="thoughtsBefore" (keyup.enter)="enterValueIntoArray($event.target.value, 'thoughtsBefore')">
     <br>
     <label>Behaviors</label>
     <input type="text" formControlName="behaviorsBefore">

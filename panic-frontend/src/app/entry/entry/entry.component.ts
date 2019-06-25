@@ -25,6 +25,13 @@ export class EntryComponent implements OnInit {
     })
   });
 
+  thoughtsBeforeInput: Array<string> = new Array();
+  thoughtsDuringInput: Array<string> = new Array();
+  thoughtsAfterInput: Array<string> = new Array();
+  behaviorsBeforeInput: Array<string> = new Array();
+  behaviorsDuringInput: Array<string> = new Array();
+  behaviorsAfterInput: Array<string> = new Array();
+
   constructor(private fb: FormBuilder, private rest: RestService) { }
 
   ngOnInit() {
@@ -41,7 +48,6 @@ export class EntryComponent implements OnInit {
     const during = this.entryForm.get('during').value;
     const after = this.entryForm.get('after').value;
 
-
     entry.thoughtsBefore = before.thoughtsBefore.split(',');
     entry.behaviorsBefore = before.behaviorsBefore.split(',');
     entry.thoughtsDuring = during.thoughtsDuring.split(',');
@@ -50,6 +56,35 @@ export class EntryComponent implements OnInit {
     entry.behaviorsAfter = after.behaviorsAfter.split(',');
     entry.userName = 'nimchimpsky';
     return entry;
+  }
+
+  private enterValueIntoArray(value: string, name: string): void {
+    switch (name) {
+      case 'thoughtsBefore': {
+        this.thoughtsBeforeInput.push(value);
+        break;
+      }
+      case 'thoughtsDuring': {
+        this.thoughtsDuringInput.push(value);
+        break;
+      }
+      case 'thoughtsAfter': {
+        this.thoughtsAfterInput.push(value);
+        break;
+      }
+      case 'behaviorsBefore': {
+        this.behaviorsBeforeInput.push(value);
+        break;
+      }
+      case 'behaviorsDuring': {
+        this.behaviorsDuringInput.push(value);
+        break;
+      }
+      case 'behaviorsAfter': {
+        this.behaviorsAfterInput.push(value);
+        break;
+      }
+    }
   }
 
 }
